@@ -1,9 +1,18 @@
 # BlackEye Coffee
 
-Mongoose Models - What are they? What are their properties?
-
+Model
+---
+```
+{
+  name: { type: String, required: true },
+  img: String,
+  price: Number,
+  ingredients: [ {String} ]
+}
+```
 
 Backend Routes (endpoint/method, expected response)
+---
 
 | Routes      | HTTP Method | DB Action | Description               |
 |-------------|-------------|-----------|---------------------------|
@@ -14,6 +23,7 @@ Backend Routes (endpoint/method, expected response)
 | /drinks/:id | Delete      | DELETE    | Delete the drink          |
 
 List of Libraries Used:
+---
 * MongoDB 
 * React
 * Express
