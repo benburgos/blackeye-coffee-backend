@@ -25,12 +25,12 @@ const cxn = mongoose.connection
 cxn.on("open", () => console.log("The Mongo Connection is Open"))
 .on("close", () => console.log("The Mongo Connection is Closed"))
 .on("error", (err)=> console.log(err))
-=======
 
 
 
 
-Middleware
+
+//Middleware
 app.use(express.json())
 app.use(express.urlencoded({extended: true}))
 app.use("/static", express.static("static")) 
