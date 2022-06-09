@@ -1,11 +1,13 @@
 //Dependencies
 require("dotenv").config();
 const PORT = process.env.PORT|| 3003
+
 const express = require("express");
 const app = express();
 const cors = require("cors");
 const mongoose = require("mongoose");
 const morgan = require("morgan");
+
 
 // Database Connection
 mongoose.connect(process.env.DATABASE_URL, {
@@ -29,6 +31,7 @@ app.use("/static", express.static("static"))
 app.use(cors());
 app.use(morgan('dev'))
 
+
 //Model
 const DrinksSchema = new mongoose.Schema({
   name: String,
@@ -36,6 +39,7 @@ const DrinksSchema = new mongoose.Schema({
   price: Number,
   Ingredients: String,
 });
+
 
 const Drinks = mongoose.model("Drinks", DrinksSchema);
 
@@ -89,6 +93,7 @@ app.get("/drinks/:id", async (req, res) => {
     res.status(400).json(error)
   }
 })
+
 
 //Listen
 app.listen(PORT, () => console.log(`You're on port ${PORT}`));
