@@ -1,5 +1,9 @@
 # BlackEye Coffee
 
+## Links
+- [Live Site](https://blackeye-coffee.netlify.app/)
+- [Frontend Repo](https://github.com/benburgos/blackeye-coffee-frontend)
+
 Model
 ---
 ```
